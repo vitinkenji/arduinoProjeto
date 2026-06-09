@@ -1,0 +1,63 @@
+OrbitalTrack - Arduoni
+
+
+ Descrição do Projeto
+
+O *OrbitalTrack* é uma solução inovadora que visa aumentar a segurança e a visibilidade no transporte de cargas, utilizando tecnologias inspiradas na indústria espacial. Este projeto em Arduino simula um dispositivo embarcado que monitora condições da carga e sua localização, garantindo comunicação e alertas mesmo em áreas sem cobertura de rede terrestre. Ele representa um protótipo funcional da inteligência por trás da plataforma OrbitalTrack, demonstrando como dados críticos podem ser coletados e transmitidos de forma resiliente.
+
+Objetivo da Solução
+
+O principal objetivo do OrbitalTrack é mitigar os riscos e prejuízos enfrentados por transportadoras devido a:
+*   Roubo de cargas e acidentes: Fornecendo rastreamento contínuo e alertas de pânico.
+*   Desastres naturais:Monitorando condições ambientais e permitindo reação rápida.
+*   Falta de conectividade: Assegurando comunicação via satélite em regiões remotas.
+
+Com isso, buscamos tornar o transporte de cargas mais seguro, eficiente e previsível, utilizando a robustez da tecnologia espacial para resolver desafios logísticos terrestres.
+
+ Componentes Utilizados (Simulados no Wokwi)
+
+Para a simulação deste projeto no Wokwi, foram utilizados os seguintes componentes:
+
+*   Arduino Uno: Microcontrolador principal para processar dados e controlar a lógica.
+*   Pushbutton (Botão de Pânico): Simula a ativação manual de um alerta de emergência pelo motorista.
+*   Slide Switch (Chave de Sinal): Simula a perda ou ganho de sinal de rede celular, alternando entre "Modo Celular" e "Modo Satélite".
+*   LED Verde (Modo Celular): Indica que o dispositivo está operando com sinal de rede celular.
+*   LED Azul (Modo Satélite): Indica que o dispositivo está operando em modo de comunicação via satélite (quando o sinal celular é perdido).
+*   Sensores Virtuais (no código): Simulam a leitura de temperatura e umidade da carga.
+*   GPS Virtual (no código): Simula a obtenção de coordenadas de localização.
+
+ Explicação do Funcionamento
+
+O sistema opera da seguinte forma:
+
+1.  Monitoramento Contínuo: O Arduino lê continuamente dados de sensores virtuais de temperatura e umidade, além de simular coordenadas GPS.
+2.  Detecção de Pânico: Um botão de pânico permite ao motorista enviar um alerta imediato em caso de emergência.
+3.  Gestão de Conectividade:* Uma chave simula a disponibilidade de sinal celular. Quando o sinal é perdido, o sistema alterna para o "Modo Satélite", indicado por LEDs, garantindo que a comunicação e o rastreamento não sejam interrompidos.
+4.  Transmissão de Dados: Todos os dados (sensores, GPS, status de pânico e modo de comunicação) são formatados em um pacote JSON e exibidos no Monitor Serial, simulando o envio para a plataforma OrbitalTrack.
+
+ Estrutura do Circuito (Wokwi)
+
+O circuito é montado no simulador Wokwi e consiste em:
+
+*   Arduino Uno: Conectado a todos os outros componentes.
+*   Botão de Pânico: Conectado ao pino digital 2 do Arduino (com INPUT_PULLUP).
+*   Chave de Sinal: Conectada ao pino digital 3 do Arduino (com INPUT_PULLUP).
+*   LED Verde: Conectado ao pino digital 4 do Arduino (via resistor, não explicitado no diagram.json mas implícito para LEDs).
+*   LED Azul: Conectado ao pino digital 5 do Arduino (via resistor).
+
+Você pode visualizar e interagir com o circuito diretamente no Wokwi através do link do projeto.
+
+instruções de Execução
+
+Para executar a simulação do OrbitalTrack no Wokwi:
+
+1.  Acesse o link do projeto Wokwi (será fornecido).
+2.  Certifique-se de que o arquivo main.ino (código Arduino) e diagram.json (layout do circuito) estejam carregados corretamente.
+3.  Clique no botão "Start Simulation" (Play) no Wokwi.
+4.  Observe o Monitor Serial para ver os dados de sensores, GPS e status de comunicação sendo transmitidos.
+5.  Pressione o *Botão de Pânico* para simular uma emergência e veja o alerta no Monitor Serial.
+6.  Alterne a *Chave de Sinal* para simular a perda/ganho de sinal celular e observe os LEDs e as mensagens no Monitor Serial indicando a mudança de modo (Celular/Satélite).
+
+ Nome Completo do Integrante
+
+*   *Vitor Kenji Kawaguchi Iwagoe Indiani* *(RM: 569329)*
