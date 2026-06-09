@@ -1,1 +1,22 @@
-
+{
+  "version": 1,
+  "author": "Vitor Kenji Kawaguchi Iwagoe Indiani",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 100, "left": 300, "attrs": { "color": "red" } },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 200, "left": 300, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 100, "left": 400, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led2", "top": 200, "left": 400, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    [ "btn1:1.l", "uno:2", "green", [] ],
+    [ "btn1:2.l", "uno:GND.1", "black", [] ],
+    [ "sw1:1", "uno:3", "green", [] ],
+    [ "sw1:2", "uno:GND.1", "black", [] ],
+    [ "led1:cathode", "uno:GND.1", "black", [] ],
+    [ "led1:anode", "uno:4", "green", [] ],
+    [ "led2:cathode", "uno:GND.1", "black", [] ],
+    [ "led2:anode", "uno:5", "blue", [] ]
+  ]
+}
